@@ -10,6 +10,9 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)leftClick:(UIBarButtonItem *)sender;
+
+- (IBAction)rightClick:(UIBarButtonItem *)sender;
 
 @end
 

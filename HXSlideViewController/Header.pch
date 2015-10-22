@@ -1,0 +1,17 @@
+//
+//  Header.pch
+//  HXSlideViewController
+//
+//  Created by huangxiong on 15/10/18.
+//  Copyright © 2015年 huangxiong. All rights reserved.
+//
+
+#ifndef Header_pch
+#define Header_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "UIView+CoordinateRelationship.h"
+
+#endif /* Header_pch */
