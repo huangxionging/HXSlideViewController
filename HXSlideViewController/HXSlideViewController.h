@@ -54,59 +54,71 @@ typedef NS_ENUM(NSUInteger, HXSlideFromDirection) {
 @interface HXSlideViewController : UIViewController
 
 /**
- *  @brief: 添加控制器, 从相应的方向
- *  @param: viewController 是相应的控制器, direction 是相应的方向
- *  @return:空
+ *  @brief  添加控制器, 从相应的方向
+ *  @param  viewController 是相应的控制器, direction 是相应的方向
+ *  @return 空
  */
 - (void) addViewController: (UIViewController *)viewController fromHXSlideDirection: (HXSlideFromDirection) direction;
 
 /**
- *  @brief: 设置指定方向的控制器的视图之间的间隔
- *  @param: gesture 是点击事件
- *  @return:空
+ *  @brief  设置指定方向的控制器的视图之间的间隔
+ *  @param  gesture 是点击事件
+ *  @return 空
  */
 - (void) setSpaceForViewControllerWithSpace: (CGFloat) space andWithSlideDirection: (HXSlideFromDirection) direction;
 
 /**
- *  @brief: 点击事件, 如
- *  @param: gesture 是点击事件
- *  @return:空
+ *  @brief  点击事件, 如
+ *  @param  gesture 是点击事件
+ *  @return 空
  */
 - (void) tapViewcontroller: (UITapGestureRecognizer *) gesture;
 
 /**
- *  @brief: 展示指定的控制器
- *  @param: viewController 是点击事件
- *  @return:空
+ *  @brief  展示指定的控制器
+ *  @param  viewController 是点击事件
+ *  @return 空
  */
 - (void) showViewController:(UIViewController *)viewController;
 
 /**
- *  @brief: 隐藏指定的控制器
- *  @param: viewController 是点击事件
- *  @return:空
+ *  @brief  隐藏指定的控制器
+ *  @param  viewController 是点击事件
+ *  @return 空
  */
 - (void) hideViewController:(UIViewController *)viewController;
 /**
- *  @brief: 展示指定方向所有的控制器
- *  @param: direction 是方向
- *  @return:空
+ *  @brief  展示指定方向所有的控制器
+ *  @param  direction 是方向
+ *  @return 空
  */
 - (void) showViewControllersWithSlideDirection: (HXSlideFromDirection) direction;
 
 /**
- *  @brief: 隐藏指定方向所有的控制器
- *  @param: direction 是方向
- *  @return:空
+ *  @brief 隐藏指定方向所有的控制器
+ *  @param direction 是方向
+ *  @return 空
  */
 - (void) hideViewControllersWithSlideDirection: (HXSlideFromDirection) direction;
 
 /**
- *  @brief: 查找指定视图对应的控制器
- *  @param: view 是控制器的视图, 应当是返回控制器的 view
- *  @return: view 对应的控制器
+ *  @brief 查找指定视图对应的控制器
+ *  @param view 是控制器的视图, 应当是返回控制器的 view
+ *  @return view 对应的控制器
  */
 - (UIViewController *) viewControllerForUnknowView: (UIView *) view;
 
+/** 
+ *  @brief  为制定控制器添加阴影
+ *  @param  viewController 是控制器
+ *  @return 空
+ */
+- (void) addShadowForViewController: (UIViewController *)viewController;
+
+/** 删除制定控制器的阴影
+ *  @param: viewController 是控制器
+ *  @return: 空
+ */
+- (void) removeShadowForViewController: (UIViewController *)viewController;
 
 @end

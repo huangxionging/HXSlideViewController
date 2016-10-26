@@ -87,6 +87,7 @@
     
     // 添加子视图
     [self.view addSubview: viewController.view];
+    [self addShadowForViewController: viewController];
     
     // 为子视图添加手势
     [viewController.view addGestureRecognizer: [[UITapGestureRecognizer alloc] initWithTarget: self action: @selector(tapViewcontroller:)]];
@@ -364,13 +365,15 @@
     
     HXSlideFromDirection direction = [self directionForViewController: viewController];
     
+    NSInteger index = viewController.view.tag % _tag;
+    
     // 将指定控制器的 View 带到顶层
     [self.view bringSubviewToFront: viewController.view];
     switch (direction) {
         case kHXSlideFromDirectionLeft: {
             
             [UIView animateWithDuration: 0.3 animations:^{
-                viewController.view.right -= _leftSlideControllers.count * _leftSpace;
+                viewController.view.right = _leftSlideControllers.count * _leftSpace;
             }];
             break;
         }
@@ -408,12 +411,13 @@
         case kHXSlideFromDirectionLeft: {
             
             // 对所有的
-            NSInteger index = _leftSlideControllers.count;
+            NSInteger index = _leftSlideControllers.count - 1;
             
             for (UIViewController *viewController in [_leftSlideControllers reverseObjectEnumerator]) {
                 [self.view sendSubviewToBack: viewController.view];
                 NSLog(@"%@", NSStringFromCGRect(viewController.view.frame));
                 [UIView animateWithDuration: 0.3 animations:^{
+                    // 计算新的位置
                     viewController.view.right = _leftSpace * index - _leftSlideControllers.count * _leftSpace;
                 }];
                 --index;
@@ -427,7 +431,7 @@
                 NSLog(@"%@", NSStringFromCGRect(viewController.view.frame));
                 [self.view sendSubviewToBack: viewController.view];
                 [UIView animateWithDuration: 0.3 animations:^{
-                    viewController.view.left = (self.view.right - _rightSpace * index) + _rightSlideControllers.count * _rightSpace;
+                    viewController.view.left = self.view.right + _rightSpace * index;
                 }];
                 
                 --index;
@@ -436,7 +440,7 @@
         }
             
         case kHXSlideFromDirectionTop: {
-            NSInteger index = _topSlideControllers.count;
+            NSInteger index = _topSlideControllers.count - 1;
             for (UIViewController *viewController in [_topSlideControllers reverseObjectEnumerator]) {
                 [self.view sendSubviewToBack: viewController.view];
                 [UIView animateWithDuration: 0.3 animations:^{
@@ -453,7 +457,7 @@
             for (UIViewController *viewController in [_bottomSlideControllers reverseObjectEnumerator]) {
                 [self.view sendSubviewToBack: viewController.view];
                 [UIView animateWithDuration: 0.3 animations:^{
-                    viewController.view.top = self.view.bottom - _bottomSpace * index + _rightSlideControllers.count * _rightSpace;
+                    viewController.view.top = self.view.bottom + _bottomSpace * index;
                 }];
                 
                 --index;
@@ -467,8 +471,7 @@
 }
 
 #pragma mark---添加阴影
-- (void) addShadowForViewController: (UIViewController *)viewController;
-{
+- (void) addShadowForViewController: (UIViewController *)viewController {
     viewController.view.layer.shadowOffset = CGSizeZero;
     viewController.view.layer.shadowOpacity = 0.75f;
     viewController.view.layer.shadowRadius = 10.0f;
@@ -478,8 +481,7 @@
 }
 
 #pragma mark---删除阴影
-- (void) removeShadowForViewController: (UIViewController *)viewController;
-{
+- (void) removeShadowForViewController: (UIViewController *)viewController {
     viewController.view.layer.shadowPath = nil;
     viewController.view.layer.shadowOpacity = 0.0f;
     viewController.view.layer.shadowRadius = 0.0;

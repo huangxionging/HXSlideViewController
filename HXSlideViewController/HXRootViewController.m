@@ -57,17 +57,17 @@
     
     BRightViewController *bRightVC = [[BRightViewController alloc] init];
     
-    [_sliderVC addViewController: aLeftVC  fromHXSlideDirection:kHXSlideFromDirectionBottom];
+    [_sliderVC addViewController: aLeftVC  fromHXSlideDirection:kHXSlideFromDirectionLeft];
     
-    [_sliderVC addViewController: bLeftVC  fromHXSlideDirection:kHXSlideFromDirectionBottom];
+    [_sliderVC addViewController: bLeftVC  fromHXSlideDirection:kHXSlideFromDirectionLeft];
     
-    [_sliderVC addViewController: aRightVC  fromHXSlideDirection:kHXSlideFromDirectionBottom];
+    [_sliderVC addViewController: aRightVC  fromHXSlideDirection:kHXSlideFromDirectionLeft];
     
-    [_sliderVC addViewController: bRightVC  fromHXSlideDirection:kHXSlideFromDirectionBottom];
+    [_sliderVC addViewController: bRightVC  fromHXSlideDirection:kHXSlideFromDirectionLeft];
     
     
     [_sliderVC setSpaceForViewControllerWithSpace: 50 andWithSlideDirection: kHXSlideFromDirectionLeft];
-    [_sliderVC setSpaceForViewControllerWithSpace: 50 andWithSlideDirection: kHXSlideFromDirectionBottom];
+    [_sliderVC setSpaceForViewControllerWithSpace: 50 andWithSlideDirection: kHXSlideFromDirectionTop];
 }
 
 - (void) leftClick: (UIBarButtonItem *)sender {
@@ -75,11 +75,11 @@
     static NSInteger countLeft = 0;
     
     if (countLeft == 0) {
-        [_sliderVC showViewControllersWithSlideDirection: kHXSlideFromDirectionBottom];
+        [_sliderVC showViewControllersWithSlideDirection: kHXSlideFromDirectionLeft];
         countLeft = 1;
     }
     else if (countLeft == 1){
-        [_sliderVC hideViewControllersWithSlideDirection: kHXSlideFromDirectionBottom];
+        [_sliderVC hideViewControllersWithSlideDirection: kHXSlideFromDirectionLeft];
         countLeft = 0;
     }
     

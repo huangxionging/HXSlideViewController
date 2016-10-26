@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F25D3B7F1BCA9F1800ECE9EF /* HXSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F25D3B7E1BCA9F1800ECE9EF /* HXSlideViewController.m */; settings = {ASSET_TAGS = (); }; };
-		F25D3B851BD2A14300ECE9EF /* ALeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F25D3B841BD2A14300ECE9EF /* ALeftViewController.m */; settings = {ASSET_TAGS = (); }; };
-		F25D3B881BD2A14F00ECE9EF /* BLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F25D3B871BD2A14F00ECE9EF /* BLeftViewController.m */; settings = {ASSET_TAGS = (); }; };
-		F25D3B8B1BD2A15900ECE9EF /* ARightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F25D3B8A1BD2A15900ECE9EF /* ARightViewController.m */; settings = {ASSET_TAGS = (); }; };
-		F25D3B8E1BD2A16700ECE9EF /* BRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F25D3B8D1BD2A16700ECE9EF /* BRightViewController.m */; settings = {ASSET_TAGS = (); }; };
-		F25D3B911BD2AE6E00ECE9EF /* UIView+CoordinateRelationship.m in Sources */ = {isa = PBXBuildFile; fileRef = F25D3B901BD2AE6E00ECE9EF /* UIView+CoordinateRelationship.m */; settings = {ASSET_TAGS = (); }; };
-		F25D3B951BD3355A00ECE9EF /* HXRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F25D3B941BD3355A00ECE9EF /* HXRootViewController.m */; settings = {ASSET_TAGS = (); }; };
+		F25D3B7F1BCA9F1800ECE9EF /* HXSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F25D3B7E1BCA9F1800ECE9EF /* HXSlideViewController.m */; };
+		F25D3B851BD2A14300ECE9EF /* ALeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F25D3B841BD2A14300ECE9EF /* ALeftViewController.m */; };
+		F25D3B881BD2A14F00ECE9EF /* BLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F25D3B871BD2A14F00ECE9EF /* BLeftViewController.m */; };
+		F25D3B8B1BD2A15900ECE9EF /* ARightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F25D3B8A1BD2A15900ECE9EF /* ARightViewController.m */; };
+		F25D3B8E1BD2A16700ECE9EF /* BRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F25D3B8D1BD2A16700ECE9EF /* BRightViewController.m */; };
+		F25D3B911BD2AE6E00ECE9EF /* UIView+CoordinateRelationship.m in Sources */ = {isa = PBXBuildFile; fileRef = F25D3B901BD2AE6E00ECE9EF /* UIView+CoordinateRelationship.m */; };
+		F25D3B951BD3355A00ECE9EF /* HXRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F25D3B941BD3355A00ECE9EF /* HXRootViewController.m */; };
+		F28317881BE30EF600A33D3B /* HXRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F28317871BE30EF600A33D3B /* HXRevealViewController.m */; };
 		F2F1F7291B71155B009DBC4C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F1F7281B71155B009DBC4C /* main.m */; };
 		F2F1F72C1B71155B009DBC4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F1F72B1B71155B009DBC4C /* AppDelegate.m */; };
 		F2F1F72F1B71155B009DBC4C /* HXSlideViewController.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2F1F72D1B71155B009DBC4C /* HXSlideViewController.xcdatamodeld */; };
@@ -48,6 +49,8 @@
 		F25D3B921BD2B04600ECE9EF /* Header.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.pch; sourceTree = "<group>"; };
 		F25D3B931BD3355A00ECE9EF /* HXRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXRootViewController.h; sourceTree = "<group>"; };
 		F25D3B941BD3355A00ECE9EF /* HXRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXRootViewController.m; sourceTree = "<group>"; };
+		F28317861BE30EF600A33D3B /* HXRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXRevealViewController.h; sourceTree = "<group>"; };
+		F28317871BE30EF600A33D3B /* HXRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXRevealViewController.m; sourceTree = "<group>"; };
 		F2F1F7231B71155B009DBC4C /* HXSlideViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HXSlideViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2F1F7271B71155B009DBC4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2F1F7281B71155B009DBC4C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -117,6 +120,8 @@
 				F25D3B8D1BD2A16700ECE9EF /* BRightViewController.m */,
 				F25D3B7D1BCA9F1800ECE9EF /* HXSlideViewController.h */,
 				F25D3B7E1BCA9F1800ECE9EF /* HXSlideViewController.m */,
+				F28317861BE30EF600A33D3B /* HXRevealViewController.h */,
+				F28317871BE30EF600A33D3B /* HXRevealViewController.m */,
 				F25D3B8F1BD2AE6E00ECE9EF /* UIView+CoordinateRelationship.h */,
 				F25D3B901BD2AE6E00ECE9EF /* UIView+CoordinateRelationship.m */,
 				F2F1F7361B71155B009DBC4C /* Images.xcassets */,
@@ -256,6 +261,7 @@
 				F25D3B951BD3355A00ECE9EF /* HXRootViewController.m in Sources */,
 				F2F1F7291B71155B009DBC4C /* main.m in Sources */,
 				F25D3B881BD2A14F00ECE9EF /* BLeftViewController.m in Sources */,
+				F28317881BE30EF600A33D3B /* HXRevealViewController.m in Sources */,
 				F25D3B7F1BCA9F1800ECE9EF /* HXSlideViewController.m in Sources */,
 				F2F1F7321B71155B009DBC4C /* ViewController.m in Sources */,
 				F2F1F72F1B71155B009DBC4C /* HXSlideViewController.xcdatamodeld in Sources */,
